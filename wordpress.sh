@@ -25,6 +25,7 @@ else
 		printf "\n-------------------------MYSQL DONE -------------------------------\n"
 		printf "\n-------------------------INSTALLING PHPMYADMIN --------------------\n"
 		apt-get install phpmyadmin
+		echo "Include /etc/phpmyadmin/apache.conf" >> /etc/apache2/apache2.conf
 		printf "\n-------------------------PHPMYADMIN INSTALLED ---------------------\n"
 		phpenmod mbstring
 		printf "\nrestarting apache2"
