@@ -24,7 +24,7 @@ else
 		mysql -u root -p$mysqlpwd -e "ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '$mysqlpwd'; flush privileges;"
 		printf "\n-------------------------MYSQL DONE -------------------------------\n"
 		printf "\n-------------------------INSTALLING PHPMYADMIN --------------------\n"
-		apt-get install phpmyadmin
+		apt-get install phpmyadmin -y
 		echo "Include /etc/phpmyadmin/apache.conf" >> /etc/apache2/apache2.conf
 		printf "\n-------------------------PHPMYADMIN INSTALLED ---------------------\n"
 		phpenmod mbstring
